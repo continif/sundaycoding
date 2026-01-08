@@ -1,0 +1,314 @@
+asn,country,organization,user_agent
+0,XX,unknown,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Flyriverbot/1.1 (+https://www.flyriver.com/crawler; AI Content Source Check)"
+0,XX,unknown,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+0,XX,unknown,qoopbot/1.0 (http://www.qoop.it/)
+0,XX,unknown,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+00000000,XX,unknown,Googlebot-News
+00000000,XX,unknown,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+00000000,XX,unknown,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+00000000,XX,unknown,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+00000000,XX,unknown,Mozilla/5.0 (iPhone; U; CPU iPhone OS) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+00000000,XX,unknown,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+00000000,XX,unknown,DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+00000000,XX,unknown,AdsBot-Google ( http://www.google.com/adsbot.html)
+00000000,XX,unknown,Facebot
+00000000,XX,unknown,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+00000000,XX,unknown,Gaisbot/3.0 (robot@gais.cs.ccu.edu.tw; http://gais.cs.ccu.edu.tw/robot.php)
+00000000,XX,unknown,Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)
+00000000,XX,unknown,Twitterbot/1.0
+00000000,XX,unknown,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+00000000,XX,unknown,cc_bot
+00000000,XX,unknown,Googlebot-Image/1.0
+00000000,XX,unknown,msnbot/0.11 ( http://search.msn.com/msnbot.htm)
+00000000,XX,unknown,msnbot/1.0 ( http://search.msn.com/msnbot.htm)
+00000000,XX,unknown,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+00000000,XX,unknown,Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+00000000,XX,unknown,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+11320,US,LightEdge Solutions,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+1267,IT,WIND TRE S.P.A.,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+12876,FR,Scaleway,Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)
+131464,BD,Digi Jadoo Broadband Ltd,cc_bot
+13188,UA,Triolan,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+132203,CN,Tencent,Googlebot/2.1 (+http://www.googlebot.com/bot.html)
+132203,CN,Tencent,Googlebot/2.1 (+http://www.google.com/bot.html)
+132203,CN,Tencent,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+13238,RU,YANDEX LLC,"Mozilla/5.0 (compatible; YandexRenderResourcesBot/1.0; +http://yandex.com/bots) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0"
+13238,RU,YANDEX LLC,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+13238,RU,YANDEX LLC,"Mozilla/5.0 (compatible; YaDirectFetcher/1.0; +http://yandex.com/bots) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0"
+13285,GB,TalkTalk Communications Limited,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+136907,HK,Huawei Cloud,Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)
+136907,HK,Huawei Cloud,"Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)"
+137316,ID,PT Panca Duta Utama,cc_bot
+138197,BD,WINK NETWORK,cc_bot
+140577,SG,Ahrefs Pte Ltd,Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)
+14061,US,DigitalOcean LLC,msnbot/1.0 ( http://search.msn.com/msnbot.htm)
+14061,US,DigitalOcean LLC,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+14061,US,DigitalOcean LLC,Googlebot-Video/1.0
+14061,US,DigitalOcean LLC,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+14061,US,DigitalOcean LLC,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+14061,US,DigitalOcean LLC,Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)
+14061,US,DigitalOcean LLC,Googlebot-Image/1.0
+14061,US,DigitalOcean LLC,Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+14593,US,SpaceX Starlink,cc_bot
+14618,US,"Amazon.com, Inc.",Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+14618,US,"Amazon.com, Inc.","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 (compatible; SitesOverPagesBot/1.0; +https://sitesoverpages.com/bot)"
+14618,US,"Amazon.com, Inc.",DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+14618,US,"Amazon.com, Inc.","Mozilla/5.0 (compatible; DotBot/1.1; http://www.opensiteexplorer.org/dotbot, help@moz.com)"
+14618,US,"Amazon.com, Inc.",AdsBot-Google ( http://www.google.com/adsbot.html)
+14618,US,"Amazon.com, Inc.",msnbot/0.11 ( http://search.msn.com/msnbot.htm)
+14618,US,"Amazon.com, Inc.","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot), Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0"
+14618,US,"Amazon.com, Inc.",Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+14618,US,"Amazon.com, Inc.",msnbot/1.0 ( http://search.msn.com/msnbot.htm)
+14618,US,"Amazon.com, Inc.",Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)
+14956,US,RouterHosting LLC,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+15169,US,Google LLC,Googlebot-Image/1.0
+152194,HK,CTG Server Limited,Googlebot/2.1 (+http://www.googlebot.com/bot.html)
+152194,HK,CTG Server Limited,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+152194,HK,CTG Server Limited,Googlebot/2.1 (+http://www.google.com/bot.html)
+15502,IE,Vodafone Ireland Limited,cc_bot
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; YaK/1.0; http://linkfluence.com/; bot@linkfluence.com)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; MJ12bot/v2.0.4; http://mj12bot.com/)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; Cocolyzebot/1.0; https://cocolyze.com/bot)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)
+16276,FR,OVH SAS,Mozilla/5.0 (compatible; MJ12bot/v2.0.2; http://mj12bot.com/)
+16509,US,"Amazon.com, Inc.",Mozilla/5.0 (compatible; Exabot/3.0;  http://www.exabot.com/go/robot)
+16509,US,"Amazon.com, Inc.",msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+16509,US,"Amazon.com, Inc.","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; ClaudeBot/1.0; +claudebot@anthropic.com)"
+16509,US,"Amazon.com, Inc.",Pandalytics/2.0 (https://domainsbot.com/pandalytics/)
+16509,US,"Amazon.com, Inc.","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)"
+16509,US,"Amazon.com, Inc.",Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+16509,US,"Amazon.com, Inc.",msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+16509,US,"Amazon.com, Inc.",Linguee Bot (bot@linguee.com)
+16509,US,"Amazon.com, Inc.",Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+18678,CO,INTERNEXA S.A. E.S.P,cc_bot
+18881,BR,TELEFÔNICA BRASIL LTDA,cc_bot
+197207,IR,Hamrahe Avval (Mobile Communication Company of Iran),cc_bot
+197540,DE,netcup GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+198584,DE,PIO-Hosting GmbH,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+19901,US,Brightspeed,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+199284,DE,Thueringer Netkom GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+20011,ZA,Dimension Data,cc_bot
+200373,DE,3xK Tech GmbH,msnbot/0.11 ( http://search.msn.com/msnbot.htm)
+201814,PL,MEVSPACE sp. z o.o.,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+201814,PL,MEVSPACE sp. z o.o.,Googlebot-Image/1.0
+201814,PL,MEVSPACE sp. z o.o.,DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+201814,PL,MEVSPACE sp. z o.o.,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+201814,PL,MEVSPACE sp. z o.o.,Gaisbot/3.0 (robot@gais.cs.ccu.edu.tw; http://gais.cs.ccu.edu.tw/robot.php)
+202306,GB,HOSTGLOBAL.PLUS LTD,"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4 (Applebot/0.1; +http://www.apple.com/go/applebot)"
+202306,GB,HOSTGLOBAL.PLUS LTD,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+202306,GB,HOSTGLOBAL.PLUS LTD,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+202306,GB,HOSTGLOBAL.PLUS LTD,Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/Fast/2.0; +http://go.mail.ru/help/robots)
+202306,GB,HOSTGLOBAL.PLUS LTD,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+202306,GB,HOSTGLOBAL.PLUS LTD,SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+202306,GB,HOSTGLOBAL.PLUS LTD,Mozilla/5.0 (compatible; Exabot/3.0;  http://www.exabot.com/go/robot)
+202306,GB,HOSTGLOBAL.PLUS LTD,Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)
+202306,GB,HOSTGLOBAL.PLUS LTD,"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/600.1.4 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)"
+202306,GB,HOSTGLOBAL.PLUS LTD,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+202306,GB,HOSTGLOBAL.PLUS LTD,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Applebot/0.1; +http://www.apple.com/go/applebot)"
+202306,GB,HOSTGLOBAL.PLUS LTD,msnbot/1.0 ( http://search.msn.com/msnbot.htm)
+20299,GT,Newcom Limited,cc_bot
+206216,US,Advin Services LLC,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+209366,CY,SEMrush CY LTD,Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)
+209605,LT,UAB Host Baltic,Googlebot-Image/1.0
+209605,LT,UAB Host Baltic,Facebot
+209605,LT,UAB Host Baltic,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+209605,LT,UAB Host Baltic,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (bot, like Gecko) Chrome/140.0.7339.210 Safari/537.36"
+209605,LT,UAB Host Baltic,Mozilla/5.0 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)
+209605,LT,UAB Host Baltic,Twitterbot/1.0
+209605,LT,UAB Host Baltic,SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+209605,LT,UAB Host Baltic,Mozilla/5.0 (compatible; Exabot/3.0;  http://www.exabot.com/go/robot)
+209605,LT,UAB Host Baltic,Gaisbot/3.0 (robot@gais.cs.ccu.edu.tw; http://gais.cs.ccu.edu.tw/robot.php)
+209605,LT,UAB Host Baltic,Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+209605,LT,UAB Host Baltic,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+209605,LT,UAB Host Baltic,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+209605,LT,UAB Host Baltic,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+210110,HK,"Kvmcloud Network CO., LIMITED",Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+210558,DE,1337 Services GmbH,Mozilla/5.0 (adaptive-bot)
+210743,FR,Babbar SAS,Mozilla/5.0 (compatible; IbouBot/1.0; +bot@ibou.io; +https://ibou.io/iboubot.html)
+211443,HK,SINO WORLDWIDE TRADING LIMITED,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+211590,FR,Bucklog SARL,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+211590,FR,Bucklog SARL,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+211590,FR,Bucklog SARL,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+211590,FR,Bucklog SARL,SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+211590,FR,Bucklog SARL,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+2119,NO,Telenor Norge AS,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+213230,DE,Hetzner Cloud - Ashburn,Mozilla/5.0 (compatible; Paqlebot/2.0; +http://www.paqle.dk/about/paqlebot)
+214940,US,KPROHOST LLC,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+214940,US,KPROHOST LLC,Googlebot-News
+214940,US,KPROHOST LLC,Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)
+214940,US,KPROHOST LLC,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+21575,PE,ENTEL PERU S.A.,cc_bot
+22439,US,"Perfect International, Inc",Mozilla/5.0 (compatible; Googlebot/2.1 +http://www.googlebot.com/bot.html)
+22724,EC,PUNTONET S.A.,cc_bot
+22927,AR,Telefonica de Argentina,cc_bot
+23033,US,Wowrack.com,Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (Windows NT 10.0; Win64; x64; trendictionbot0.5.0; trendiction search; http://www.trendiction.de/bot; please let us know of any problems; web at trendiction.com) Gecko/20100101 Firefox/125.0
+24940,DE,Hetzner Online GmbH,serpstatbot/2.1 (advanced backlink tracking bot; https://serpstatbot.com/; abuse@serpstatbot.com)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; vebidoobot/1.0; +https://blog.vebidoo.de/vebidoobot/)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; SEOkicks; +https://www.seokicks.de/robot.html)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; SeekportBot; +https://bot.seekport.com)
+24940,DE,Hetzner Online GmbH,Mozilla/5.0 (compatible; DataForSeoBot/1.0; +https://dataforseo.com/dataforseo-bot)
+24940,DE,Hetzner Online GmbH,MyAwesomeRobotsBot/1.0 (+http://votre-domaine.com/bot-info)
+24940,DE,Hetzner Online GmbH,DomainStatsBot/1.0 (https://domainstats.com/pages/our-bot)
+25106,BY,Mobile TeleSystems JLLC,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.68 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+25144,BA,Telekomunikacije Republike Srpske a.d.,cc_bot
+25820,CA,IT7 Networks Inc,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+25820,CA,IT7 Networks Inc,Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)
+262369,BR,ok virtual provedor de internet ltda,cc_bot
+262594,BR,4iNET Communications,cc_bot
+262813,BR,Superimagem Tecnologia em Eletrônica Ltda,cc_bot
+262847,BR,DBUG TELECOM LTDA,cc_bot
+262909,BR,JK TELECOMUNICACOES LTDA,cc_bot
+262958,BR,"CARRARO, HAINOSZ & CIA LTDA - ME",cc_bot
+263078,BR,MARBRIELE.COM INTERNET PROVIDER LTDA,cc_bot
+263297,BR,VERO S.A,cc_bot
+263394,BR,Networks Wireless Telecom,cc_bot
+263462,BR,SPEED PLANET TELECOMUNICAÇÕES LTDA - EPP,cc_bot
+263544,BR,Várzea Net Telecomunicações Ltda ME,cc_bot
+263979,BR,CYBERNETRS LTDA - ME,cc_bot
+264872,BR,Brothers Lan House Ltda Me,cc_bot
+264961,BR,Aline de Oliveira Marin - ME,cc_bot
+265886,BR,Universo Digital Telecomunicações LTDA ME,cc_bot
+26599,BR,Telefônica Brasil,cc_bot
+26615,BR,TIM S/A,cc_bot
+266151,BR,Mania NET,cc_bot
+266356,BR,PRONTO FIBRA LTDA,cc_bot
+266358,BR,H NET SERVICOS DE COMUNICACAO E TECNOLOGIA LTDA,cc_bot
+266527,BR,REDENET - EVS TELECOMUNICACOES LTDA,cc_bot
+266535,BR,PELIKAN NET LTDA-ME,cc_bot
+266584,BR,Conect- Provedor de Internet Ltda EPP,cc_bot
+267197,BR,CAMOA SERVIÇOS TELECOM LTDA.,cc_bot
+268945,BR,Boa vista Net Ltda - me,cc_bot
+269353,BR,VOLAREHOST INTERNET LTDA ME,cc_bot
+269431,BR,ARFIBER PROVEDOR LTDA,cc_bot
+270691,BR,REVNET TELECOMUNICACOES E SERVICOS LTDA,cc_bot
+271874,EC,SERVITRACTOR S.A.,cc_bot
+273007,VE,"Speednet, C.A. Fi-Ven Internet",cc_bot
+273883,EC,MEGATEL-EC S.A.,cc_bot
+27699,BR,TELEFÔNICA BRASIL S.A,cc_bot
+27738,EC,Ecuadortelecom S.A.,cc_bot
+27947,EC,Telconet S.A,cc_bot
+28006,EC,CORPORACION NACIONAL DE TELECOMUNICACIONES - CNT EP,cc_bot
+28015,AR,MERCO COMUNICACIONES,cc_bot
+28126,BR,BRISANET SERVICOS DE TELECOMUNICACOES S.A,cc_bot
+28219,BR,Net Rosas Telecomunicações Ltda.,cc_bot
+28220,BR,Alares Internet,cc_bot
+28229,BR,HARDONLINE LTDA,cc_bot
+28573,BR,Claro NXT Telecomunicacoes Ltda,cc_bot
+28649,BR,Desktop Sigmanet Comunicação Multimídia SA,cc_bot
+28668,BR,Desktop Sigmanet Comunicação Multimídia SA,cc_bot
+28669,BR,VERO S.A,cc_bot
+29447,FR,Iliad Italia S.p.A,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+29695,NO,Lyse Tele AS,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+30722,IT,Vodafone Italia S.p.A.,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+31200,RU,Novotelecom Ltd,cc_bot
+3209,DE,Vodafone GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+3269,IT,TIM S.p.A. (fka. Telecom Italia S.p.A.),"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+3320,DE,Deutsche Telekom AG,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+33915,NL,Vodafone Libertel B.V.,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+36352,US,HostPapa,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+36352,US,HostPapa,Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+36352,US,HostPapa,AdsBot-Google ( http://www.google.com/adsbot.html)
+3816,CO,COLOMBIA TELECOMUNICACIONES S.A. ESP BIC,cc_bot
+396982,US,Google Cloud Platform,Googlebot
+396982,US,Google Cloud Platform,ZoominfoBot (zoominfobot at zoominfo dot com)
+396982,US,Google Cloud Platform,Mozilla/5.0 (Windows NT 6.3;compatible; Leikibot/1.0; +http://www.leiki.com)
+399486,CA,Virtuo,Mozilla/5.0 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)
+399486,CA,Virtuo,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+399486,CA,Virtuo,Twitterbot/1.0
+399486,CA,Virtuo,Facebot
+399486,CA,Virtuo,msnbot/0.11 ( http://search.msn.com/msnbot.htm)
+399486,CA,Virtuo,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+399498,US,Private Networks Labs LLC,DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)
+399498,US,Private Networks Labs LLC,"Mozilla/5.0 (compatible; DotBot/1.2; +http://www.opensiteexplorer.org/dotbot, help@moz.com)"
+399498,US,Private Networks Labs LLC,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36 (compatible; PetalBot; +https://aspiegel.com/petalbot)"
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; Googlebot-Image/1.0; +http://www.google.com/bot.html)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; SEOkicks-Robot +http://www.seokicks.de/robot.html)
+399498,US,Private Networks Labs LLC,Googlebot/2.1 (+http://www.google.com/bot.html)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)
+399498,US,Private Networks Labs LLC,Mozilla/5.0 (compatible; Googlebot-News/2.1; +http://www.google.com/bot.html)
+400536,US,Nodestop LLC,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+400536,US,Nodestop LLC,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+400536,US,Nodestop LLC,Mozilla/5.0 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)
+400536,US,Nodestop LLC,msnbot/0.11 ( http://search.msn.com/msnbot.htm)
+400536,US,Nodestop LLC,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+400536,US,Nodestop LLC,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+400536,US,Nodestop LLC,Googlebot-Image/1.0
+400536,US,Nodestop LLC,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+400536,US,Nodestop LLC,Gaisbot/3.0 (robot@gais.cs.ccu.edu.tw; http://gais.cs.ccu.edu.tw/robot.php)
+43037,CZ,"Seznam.cz, a.s.",Mozilla/5.0 (compatible; SeznamBot/4.0; +https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/)
+45899,VN,VNPT Corp,cc_bot
+4760,HK,HKT Limited,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+4761,ID,PT Indosat Tbk,cc_bot
+47764,RU,LLC VK (Mail.ru),Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/Robots/2.0; +https://help.mail.ru/webmaster/indexing/robots)
+48090,GB,TECHOFF SRV LIMITED,Mozilla/5.0 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)
+48090,GB,TECHOFF SRV LIMITED,Googlebot-Video/1.0
+48090,GB,TECHOFF SRV LIMITED,AdsBot-Google ( http://www.google.com/adsbot.html)
+48090,GB,TECHOFF SRV LIMITED,Mozilla/5.0 (compatible; archive.org_bot; Wayback Machine Live Record; +http://archive.org/details/archive.org_bot)
+48090,GB,TECHOFF SRV LIMITED,SAMSUNG-SGH-E250/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0 (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+48090,GB,TECHOFF SRV LIMITED,Gaisbot/3.0 (robot@gais.cs.ccu.edu.tw; http://gais.cs.ccu.edu.tw/robot.php)
+48090,GB,TECHOFF SRV LIMITED,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+48090,GB,TECHOFF SRV LIMITED,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+48090,GB,TECHOFF SRV LIMITED,Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)
+48090,GB,TECHOFF SRV LIMITED,Mozilla/5.0 (compatible; Exabot/3.0;  http://www.exabot.com/go/robot)
+48230,UA,LLC MONOLITH.NET,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+48279,UA,Delta-Net LLC,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+48282,RU,Hosting technology LTD,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+50300,GB,CustodianDC Limited,Mozilla/5.0 (compatible; MojeekBot/0.11; +https://www.mojeek.com/bot.html)
+50673,NL,Serverius Holding B.V.,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+51167,DE,Contabo GmbH,msnbot/1.0 ( http://search.msn.com/msnbot.htm)
+51167,DE,Contabo GmbH,Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)
+51167,DE,Contabo GmbH,Googlebot-Image/1.0
+51167,DE,Contabo GmbH,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+51167,DE,Contabo GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+51167,DE,Contabo GmbH,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+51167,DE,Contabo GmbH,Mozilla/5.0 (compatible; bingbot/2.0  http://www.bing.com/bingbot.htm)
+51396,DE,Pfcloud UG,DoCoMo/2.0 N905i(c100;TB;W24H16) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+51396,DE,Pfcloud UG,Mozilla/5.0 (iPhone; U; CPU iPhone OS) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+51396,DE,Pfcloud UG,Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)
+51396,DE,Pfcloud UG,Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+51765,FI,Oy Crea Nova Hosting Solution Ltd,"Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.69 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+51852,PA,Private Layer INC,Mozilla/5.0 (compatible; Exabot/3.0;  http://www.exabot.com/go/robot)
+51852,PA,Private Layer INC,Mozilla/5.0 (iPhone; U; CPU iPhone OS) (compatible; Googlebot-Mobile/2.1;  http://www.google.com/bot.html)
+51852,PA,Private Layer INC,Mozilla/5.0 (compatible; YandexNews/4.0; +http://yandex.com/bots)
+51852,PA,Private Layer INC,msnbot-media/1.1 ( http://search.msn.com/msnbot.htm)
+51852,PA,Private Layer INC,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html)
+51852,PA,Private Layer INC,Facebot
+51852,PA,Private Layer INC,msnbot/1.1 ( http://search.msn.com/msnbot.htm)
+51852,PA,Private Layer INC,googlebot
+52573,BR,Une Telecom Ltda,cc_bot
+52613,BR,GIGA MAIS FIBRA TELECOMUNICACOES S.A. (VIP),cc_bot
+52871,BR,TASCOM TELECOMUNICAÇÕES LTDA,cc_bot
+53125,BR,B S Costa Telecom,cc_bot
+53167,BR,SEBRATEL TECNOLOGIA LTDA,cc_bot
+53514,US,UHQ Services LLC,Googlebot/2.1 ( http://www.googlebot.com/bot.html)
+53514,US,UHQ Services LLC,Facebot
+53514,US,UHQ Services LLC,Mozilla/5.0 (compatible; Googlebot/2.1;  http://www.google.com/bot.html)
+5606,RO,GTS Telecom SRL,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+59443,KZ,Baynur and P Ltd.,cc_bot
+63473,US,"HostHatch, LLC",Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+63473,US,"HostHatch, LLC",Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+63473,US,"HostHatch, LLC",DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)
+6821,MK,Makedonski Telekom AD-Skopje,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+701,US,Verizon Business,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+7303,AR,Telecom Argentina S.A.,cc_bot
+7738,BR,V.tal,cc_bot
+7922,US,"Comcast Cable Communications, LLC",Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+7922,US,"Comcast Cable Communications, LLC","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0"
+7941,US,Internet Archive,Mozilla/5.0 (compatible; archive.org_bot +http://archive.org/details/archive.org_bot) Zeno/d03bbe0 warc/v0.8.84
+8167,BR,V.tal,cc_bot
+8193,UZ,"""Uzbektelekom"" Joint Stock Company",cc_bot
+8560,DE,IONOS SE,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Flyriverbot/1.1 (+https://www.flyriver.com/crawler; AI Content Source Check)"
+8767,DE,M-net Telekommunikations GmbH,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+9009,RO,M247 Europe SRL,Mozilla/5.0 (compatible; Googlebot/2.1 +http://www.googlebot.com/bot.html)
+9009,RO,M247 Europe SRL,cc_bot
+9269,HK,Hong Kong Broadband Network Ltd.,Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
