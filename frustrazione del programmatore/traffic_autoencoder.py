@@ -27,8 +27,8 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # --- Configuration with Hardcoded Absolute Paths ---
-DATASET_PATH = "/home/francesco/code/astarte/data/malicious_dataset.unique.csv"
-MODEL_SAVE_PATH = Path("/home/francesco/code/astarte/astarte/core/ml/saved_autoencoder")
+DATASET_PATH = "malicious_dataset.unique.csv"
+MODEL_SAVE_PATH = Path("./saved_autoencoder")
 
 # --- Training Parameters ---
 # Using a sample for feasible interactive training.
