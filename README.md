@@ -7,7 +7,7 @@ Qui troverai tutti i **snippet**, gli **script** e i **progetti** descritti negl
 
 ## 🔮 Come usare questo repo?
 - **Clona** il repo e **esplora** le cartelle come se fossero stanze di un castello.
-- Ogni articolo ha la sua **directory** con il codice pronto all’uso.
+- Ogni articolo ha la sua **directory** con il codice, quando serve, pronto all’uso.
 - Se trovi un **bug**, apri un **issue** (o lancia un **fireball** nei commenti).
 
 ## 🛠️ Requisiti
