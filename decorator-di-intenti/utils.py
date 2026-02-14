@@ -50,7 +50,40 @@ def timing(func):
         return risultato
     return wrapper
 
-# login_required: Simula un controllo accessi, nel mondo vero ci metti sessioni o token JWT, qui usiamo una varibilona
+# retry: prova un tot di volte se le cose non funzionano.
+def retry(tentativi=3, ritardo=2):
+    """Riprova a eseguire la funzione se fallisce. Perché arrendersi subito?"""
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            mancanti = tentativi
+            while mancanti > 0:
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    mancanti -= 1
+                    if mancanti == 0:
+                        print(f" [!] {func.__name__} ha fallito dopo {tentativi} tentativi.")
+                        raise e
+                    print(f" [?] Errore in {func.__name__}: {e}. Riprovo tra {ritardo}s... (Mancano {mancanti})")
+                    time.sleep(ritardo)
+        return wrapper
+    return decorator
+
+# --- ESEMPIO DI UTILIZZO ---
+
+@retry(tentativi=4, ritardo=1)
+def scarica_dati_da_internet():
+    # Simuliamo un server a basso costo con problemi esistenziali e scarsa autostima
+    import random
+    if random.random() < 0.7:
+        raise ConnectionError("Server non raggiungibile!")
+    return "Dati scaricati con successo!"
+
+print(scarica_dati_da_internet())
+
+
+# login_required: Simula un controllo accessi, nel mondo vero ci metti sessioni o token JWT, qui usiamo una varibilona dal nome importante e originale:
 UTENTE_AUTENTICATO = False 
 
 def login_required(func):
