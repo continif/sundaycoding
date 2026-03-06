@@ -1,0 +1,255 @@
+
+    <html>
+    <head>
+        <title>Audit Sicurezza - access.2025-11-09.log</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 40px; background-color: #f4f7f6; }
+            .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+            h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+            h2 { color: #2980b9; margin-top: 30px; border-left: 5px solid #3498db; padding-left: 10px; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 14px; }
+            th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
+            th { background-color: #3498db; color: white; }
+            .stats-grid { display: flex; gap: 20px; margin-bottom: 20px; }
+            .stat-card { background: #34495e; color: white; padding: 20px; border-radius: 8px; flex: 1; text-align: center; }
+            .plots { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+            pre { background: #272822; color: #a6e22e; padding: 15px; border-radius: 5px; overflow-x: auto; font-family: 'Courier New', monospace; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Audit Sicurezza: access.2025-11-09.log</h1>
+            <p>Report generato il: 2026-03-06 13:53:23</p>
+
+            <div class="stats-grid">
+                <div class="stat-card"><h3>1438</h3><p>Richieste</p></div>
+                <div class="stat-card"><h3>38</h3><p>Scanner</p></div>
+                <div class="stat-card"><h3>0</h3><p>Impostori</p></div>
+                <div class="stat-card"><h3>0</h3><p>Scrapers</p></div>
+            </div>
+
+            <div class="plots">
+                <img src="plot_status.png" width="400">
+                <img src="plot_traffico.png" width="600">
+            </div>
+
+            <h2>[1] Top Anomalie Statistiche (Z-Score)</h2>
+            <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Timestamp</th>
+      <th>ASN</th>
+      <th>Richieste</th>
+      <th>Z_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-11-09 03:30:00+00:00</td>
+      <td>AS39351 31173 Services AB</td>
+      <td>171</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 13:00:00+00:00</td>
+      <td>AS134643 PT Jaya Kartha Solusindo</td>
+      <td>46</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 07:00:00+00:00</td>
+      <td>AS215540 Global Connectivity Solutions Llp</td>
+      <td>46</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 01:30:00+00:00</td>
+      <td>AS3462 Data Communication Business Group</td>
+      <td>46</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 21:00:00+00:00</td>
+      <td>AS135377 UCLOUD INFORMATION TECHNOLOGY HK LIMITED</td>
+      <td>6</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 20:30:00+00:00</td>
+      <td>AS211590 Bucklog SARL</td>
+      <td>105</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 12:00:00+00:00</td>
+      <td>AS11830 Instituto Costarricense de Electricidad y Telecom.</td>
+      <td>1</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 15:00:00+00:00</td>
+      <td>AS133774 Fuzhou</td>
+      <td>1</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 16:30:00+00:00</td>
+      <td>AS135089 China Telecom</td>
+      <td>1</td>
+      <td>6.70979</td>
+    </tr>
+    <tr>
+      <td>2025-11-09 15:30:00+00:00</td>
+      <td>AS135918 VIET DIGITAL TECHNOLOGY LIABILITY COMPANY</td>
+      <td>1</td>
+      <td>6.70979</td>
+    </tr>
+  </tbody>
+</table>
+
+            <h2>[2] Vulnerability Scanners Rilevati</h2>
+            <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>totale</th>
+      <th>errori</th>
+      <th>url_sensibili</th>
+      <th>error_rate</th>
+    </tr>
+    <tr>
+      <th>Client_IP</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>185.177.72.104</th>
+      <td>105</td>
+      <td>104</td>
+      <td>69</td>
+      <td>99.047619</td>
+    </tr>
+    <tr>
+      <th>103.78.247.150</th>
+      <td>59</td>
+      <td>59</td>
+      <td>58</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>185.213.155.231</th>
+      <td>171</td>
+      <td>170</td>
+      <td>26</td>
+      <td>99.415205</td>
+    </tr>
+    <tr>
+      <th>78.153.140.176</th>
+      <td>30</td>
+      <td>29</td>
+      <td>23</td>
+      <td>96.666667</td>
+    </tr>
+    <tr>
+      <th>20.37.96.143</th>
+      <td>63</td>
+      <td>63</td>
+      <td>7</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>78.153.140.203</th>
+      <td>8</td>
+      <td>7</td>
+      <td>6</td>
+      <td>87.500000</td>
+    </tr>
+    <tr>
+      <th>4.241.170.137</th>
+      <td>79</td>
+      <td>79</td>
+      <td>5</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>52.178.223.71</th>
+      <td>146</td>
+      <td>146</td>
+      <td>4</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>159.65.29.173</th>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>172.192.2.113</th>
+      <td>42</td>
+      <td>42</td>
+      <td>2</td>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+
+            <h2>[3] Scrapers Aggressivi</h2>
+            <p>Nessuno scraper rilevato.</p>
+
+            <h2>[4] Finti Motori di Ricerca (Impostori)</h2>
+            <p>Nessun impostore rilevato.</p>
+
+            <h2>[5] Configurazione .htaccess Suggerita</h2>
+            <pre>
+&lt;RequireAll&gt;
+    Require all granted
+    Require not ip 102.88.52.214   # AS29465 MTN NIGERIA Communication limited
+    Require not ip 103.191.178.27  # AS150132 REDDOT DIGITAL LIMITED
+    Require not ip 103.207.99.1    # AS134643 PT Jaya Kartha Solusindo
+    Require not ip 103.78.247.150  # AS133296 Web Werks India Pvt. Ltd.
+    Require not ip 104.45.41.45    # AS8075 Microsoft Corporation
+    Require not ip 111.250.109.92  # AS3462 Data Communication Business Group
+    Require not ip 115.79.196.94   # AS7552 Viettel Group
+    Require not ip 136.144.19.3    # AS206092 F.n.s. Holdings Limited
+    Require not ip 152.42.231.133  # AS14061 DigitalOcean, LLC
+    Require not ip 158.220.121.230 # AS51167 Contabo GmbH
+    Require not ip 159.65.203.77   # AS14061 DigitalOcean, LLC
+    Require not ip 159.65.29.173   # AS14061 DigitalOcean, LLC
+    Require not ip 160.30.112.242  # AS135918 VIET DIGITAL TECHNOLOGY LIABILITY COMPANY
+    Require not ip 172.190.142.176 # AS8075 Microsoft Corporation
+    Require not ip 172.192.2.113   # AS8075 Microsoft Corporation
+    Require not ip 172.207.9.124   # AS8075 Microsoft Corporation
+    Require not ip 173.249.144.86  # AS40819 Liquid Web, L.L.C
+    Require not ip 173.249.147.129 # AS40819 Liquid Web, L.L.C
+    Require not ip 185.177.72.104  # AS211590 Bucklog SARL
+    Require not ip 185.213.155.231 # AS39351 31173 Services AB
+    Require not ip 185.214.74.63   # AS215540 Global Connectivity Solutions Llp
+    Require not ip 196.251.115.6   # Unknown
+    Require not ip 2.58.56.150     # AS210558 1337 Services GmbH
+    Require not ip 20.37.96.143    # AS8075 Microsoft Corporation
+    Require not ip 208.109.34.209  # AS398101 GoDaddy.com, LLC
+    Require not ip 212.147.5.172   # AS12350 VTX Services SA
+    Require not ip 216.24.219.6    # AS206092 F.n.s. Holdings Limited
+    Require not ip 217.154.199.41  # AS8560 IONOS SE
+    Require not ip 4.241.170.137   # AS8075 Microsoft Corporation
+    Require not ip 45.138.16.168   # AS210558 1337 Services GmbH
+    Require not ip 52.178.223.71   # AS8075 Microsoft Corporation
+    Require not ip 62.60.130.213   # AS215930 Cipher Operations Doo Beograd - Novi Beograd
+    Require not ip 67.23.231.154   # AS33182 HostDime.com, Inc.
+    Require not ip 78.153.140.176  # AS202306 Hostglobal.plus Ltd
+    Require not ip 78.153.140.203  # AS202306 Hostglobal.plus Ltd
+    Require not ip 8.210.47.14     # AS45102 Alibaba US Technology Co., Ltd.
+    Require not ip 80.217.197.41   # AS1257 Tele2 SWIPnet
+    Require not ip 91.220.230.203  # AS51995 Toroptsev Igor
+&lt;/RequireAll&gt;
+            </pre>
+        </div>
+    </body>
+    </html>
+    
