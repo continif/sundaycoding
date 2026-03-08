@@ -1,6 +1,6 @@
 # Analisi dei Log con Pandas: Identificare e Bloccare i "Cattivi"
 
-Questo repository fa parte della serie **Sunday Coding** e si concentra sull'uso avanzato dei Dataframe di Pandas per analizzare i log dei server web al fine di migliorare la sicurezza.
+Questo repository fa parte della serie [**Sunday Coding**](https://sundaycoding.substack.com/) e si concentra sull'uso avanzato dei Dataframe di Pandas per analizzare i log dei server web al fine di migliorare la sicurezza.
 
 ## Funzionalità del Progetto
 
