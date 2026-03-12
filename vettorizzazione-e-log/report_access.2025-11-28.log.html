@@ -1,0 +1,256 @@
+<html><head><title>Audit access.2025-11-28.log</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background: #f8f9fa; }
+        .container { max-width: 1100px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 0.9em; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #2c3e50; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        /* Lo stile della card Gemini-like */
+        .code-card { background-color: #1e1e1e; border-radius: 8px; overflow: hidden; margin: 20px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .code-header { background-color: #333; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #444; }
+        .code-title { color: #aaa; font-size: 12px; font-family: monospace; }
+        #copy-btn { background: transparent; border: none; cursor: pointer; color: #aaa; display: flex; align-items: center; transition: 0.2s; }
+        #copy-btn:hover { color: #fff; }
+        .htaccess-block { padding: 15px; overflow-x: auto; }
+        .htaccess-block pre { margin: 0; color: #b5cea8; font-family: 'Fira Code', monospace; font-size: 13px; }
+
+        footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #7f8c8d; }
+    </style>
+    
+    <script>
+    function copyHtaccess() {
+        const text = document.getElementById('htaccess-code').innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = document.getElementById('copy-btn');
+            const originalColor = btn.style.color;
+            btn.style.color = '#4ade80';
+            setTimeout(() => btn.style.color = originalColor, 1500);
+        });
+    }
+    </script>
+    </head><body><div class='container'><h1>Report Analisi Sicurezza: access.2025-11-28.log</h1><h2>I Bastardi (Tentativi Furto Dati)</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>tentativi</th>
+      <th>cosa_cercavano</th>
+    </tr>
+    <tr>
+      <th>Client_IP</th>
+      <th>Country</th>
+      <th>ASN</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>44.250.148.24</th>
+      <th>United States</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>31</td>
+      <td>"GET /vendor/.env HTTP/1.1", "GET /.env HTTP/1.1", "GET /cronlab/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>54.252.146.132</th>
+      <th>Australia</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>31</td>
+      <td>"GET /.env.local HTTP/1.1", "GET /.git/config HTTP/1.1", "GET /cron/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>44.234.144.252</th>
+      <th>United States</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>29</td>
+      <td>"GET /lib/.env HTTP/1.1", "GET /exapi/.env HTTP/1.1", "GET /apps/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>13.210.114.99</th>
+      <th>Australia</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>27</td>
+      <td>"GET /core/Datavase/.env HTTP/1.1", "GET /.env.remote HTTP/1.1", "GET /lab/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>3.27.186.157</th>
+      <th>Australia</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>27</td>
+      <td>"GET /core/app/.env HTTP/1.1", "GET /.git/config HTTP/1.1", "GET /cronlab/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>3.107.99.240</th>
+      <th>Australia</th>
+      <th>AS16509 Amazon.com, Inc.</th>
+      <td>25</td>
+      <td>"GET /config/.env HTTP/1.1", "GET /assets/.env HTTP/1.1", "GET /database/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>78.153.140.178</th>
+      <th>United Kingdom</th>
+      <th>AS202306 Hostglobal.plus Ltd</th>
+      <td>16</td>
+      <td>"GET /.env HTTP/1.1", "GET /.env.example.production HTTP/1.1", "GET /wp-content/plugins/.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>68.183.49.49</th>
+      <th>United States</th>
+      <th>AS14061 DigitalOcean, LLC</th>
+      <td>6</td>
+      <td>"GET /.git/config HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>138.197.94.71</th>
+      <th>United States</th>
+      <th>AS14061 DigitalOcean, LLC</th>
+      <td>2</td>
+      <td>"GET /.git/config HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>94.26.88.18</th>
+      <th>Bulgaria</th>
+      <th>AS201814 MEVSPACE sp. z o.o.</th>
+      <td>2</td>
+      <td>"GET /.git/config HTTP/1.1", "GET /.git/credentials HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>143.110.217.244</th>
+      <th>Canada</th>
+      <th>AS14061 DigitalOcean, LLC</th>
+      <td>2</td>
+      <td>"GET /.env HTTP/2.0", "GET /.git/config HTTP/2.0"</td>
+    </tr>
+    <tr>
+      <th>159.89.168.197</th>
+      <th>India</th>
+      <th>AS14061 DigitalOcean, LLC</th>
+      <td>2</td>
+      <td>"GET /.env HTTP/1.1", "GET /.git/config HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>142.111.146.31</th>
+      <th>Malaysia</th>
+      <th>AS149440 Evoxt Sdn. Bhd.</th>
+      <td>1</td>
+      <td>"GET /.env HTTP/2.0"</td>
+    </tr>
+    <tr>
+      <th>213.209.157.162</th>
+      <th>Germany</th>
+      <th>AS42821 K&amp;K Kommunikationssysteme GmbH</th>
+      <td>1</td>
+      <td>"GET /.git/config HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>181.41.206.219</th>
+      <th>United States</th>
+      <th>AS174 Cogent Communications, LLC</th>
+      <td>1</td>
+      <td>"GET /.env HTTP/2.0"</td>
+    </tr>
+    <tr>
+      <th>165.232.136.45</th>
+      <th>United States</th>
+      <th>AS14061 DigitalOcean, LLC</th>
+      <td>1</td>
+      <td>"GET /.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>209.15.112.245</th>
+      <th>Thailand</th>
+      <th>AS135566 National Telecom Public Company Limited</th>
+      <td>1</td>
+      <td>"GET /admin/config.php HTTP/1.0"</td>
+    </tr>
+    <tr>
+      <th>20.10.114.112</th>
+      <th>United States</th>
+      <th>AS8075 Microsoft Corporation</th>
+      <td>1</td>
+      <td>"GET /.env HTTP/1.1"</td>
+    </tr>
+    <tr>
+      <th>64.62.156.202</th>
+      <th>United States</th>
+      <th>AS6939 Hurricane Electric LLC</th>
+      <td>1</td>
+      <td>"GET /.git/config HTTP/1.1"</td>
+    </tr>
+  </tbody>
+</table><h2>I Rompicojons (Brute Force Detection)</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>max_velocita_rilevata</th>
+      <th>totale_martellate</th>
+    </tr>
+    <tr>
+      <th>Client_IP</th>
+      <th>Country</th>
+      <th>ASN</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>91.224.92.99</th>
+      <th>United Kingdom</th>
+      <th>AS209605 UAB Host Baltic</th>
+      <td>114.0</td>
+      <td>963</td>
+    </tr>
+    <tr>
+      <th>84.247.171.133</th>
+      <th>France</th>
+      <th>AS51167 Contabo GmbH</th>
+      <td>14.0</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table><h2>[5] Configurazione .htaccess Suggerita</h2>
+        <div class="code-card">
+            <div class="code-header">
+                <span class="code-title">da aggiungere al file .htaccess</span>
+                <button id="copy-btn" onclick="copyHtaccess()" title="Copia codice"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0-33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-320v-480 480Z"/></svg></button>
+            </div>
+            <div class="htaccess-block"><pre id="htaccess-code">&lt;RequireAll&gt;
+    Require all granted
+    Require not ip 13.210.114.99   # AS16509 Amazon.com, Inc.
+    Require not ip 138.197.94.71   # AS14061 DigitalOcean, LLC
+    Require not ip 142.111.146.31  # AS149440 Evoxt Sdn. Bhd.
+    Require not ip 143.110.217.244 # AS14061 DigitalOcean, LLC
+    Require not ip 159.89.168.197  # AS14061 DigitalOcean, LLC
+    Require not ip 165.232.136.45  # AS14061 DigitalOcean, LLC
+    Require not ip 181.41.206.219  # AS174 Cogent Communications, LLC
+    Require not ip 20.10.114.112   # AS8075 Microsoft Corporation
+    Require not ip 209.15.112.245  # AS135566 National Telecom Public Company Limited
+    Require not ip 213.209.157.162 # AS42821 K&K Kommunikationssysteme GmbH
+    Require not ip 3.107.99.240    # AS16509 Amazon.com, Inc.
+    Require not ip 3.27.186.157    # AS16509 Amazon.com, Inc.
+    Require not ip 44.234.144.252  # AS16509 Amazon.com, Inc.
+    Require not ip 44.250.148.24   # AS16509 Amazon.com, Inc.
+    Require not ip 54.252.146.132  # AS16509 Amazon.com, Inc.
+    Require not ip 64.62.156.202   # AS6939 Hurricane Electric LLC
+    Require not ip 68.183.49.49    # AS14061 DigitalOcean, LLC
+    Require not ip 78.153.140.178  # AS202306 Hostglobal.plus Ltd
+    Require not ip 84.247.171.133  # AS51167 Contabo GmbH
+    Require not ip 91.224.92.99    # AS209605 UAB Host Baltic
+    Require not ip 94.26.88.18     # AS201814 MEVSPACE sp. z o.o.
+&lt;/RequireAll&gt;</pre></div>
+        </div>
+        <footer>Powered by Sunday Coding & Gemini AI</footer></div></body></html>
