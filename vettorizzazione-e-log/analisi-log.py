@@ -6,6 +6,12 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import geoip2.database
 import csv
+import atexit
+import time
+import functools
+import re
+
+
 
 # --- GESTIONE ARGOMENTI ---
 parser = argparse.ArgumentParser(description='Analizzatore di Log per Audit di Sicurezza')
@@ -14,6 +20,17 @@ args = parser.parse_args()
 
 nome_sito = os.path.basename(args.logfile)
 
+def timing(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        inizio = time.perf_counter()
+        risultato = func(*args, **kwargs)
+        fine = time.perf_counter()
+        print(f"--- [TIMER] Tempo impiegato: {fine - inizio:.4f} secondi ---")
+        return risultato
+    return wrapper
+
+@timing
 def carica_e_pulisci_log(path_file):
     regex_pattern = r'\s(?=(?:[^"]*"[^"]*")*[^"]*$)(?![^\[]*\])'
     try:
@@ -42,6 +59,7 @@ def carica_e_pulisci_log(path_file):
         print(f"Errore: {e}")
         return pd.DataFrame()
 
+@timing
 def arricchisci_dati_rete(df, path_country, path_asn):
     try:
         reader_geo = geoip2.database.Reader(path_country)
@@ -67,6 +85,7 @@ def arricchisci_dati_rete(df, path_country, path_asn):
         df['Country'], df['ASN'] = "Unknown", "Unknown"
         return df
 
+@timing
 def cerca_bastardi(df):
     """Cerchiamo i ladri di account!"""
     if df.empty: return pd.DataFrame()
@@ -80,6 +99,46 @@ def cerca_bastardi(df):
         ).sort_values(by='tentativi', ascending=False)
     return pd.DataFrame()
 
+
+@timing
+def cerca_bastardi_con_il_for(df):
+    """Versione preistorica: lenta, verbosa e anti-pattern."""
+    if df.empty:
+        return {}
+
+    # famo la regexp a mano
+    pattern_sensibile = r'\.env|\.git|wp-config|config\.php|\.htaccess|etc/passwd'
+    regex = re.compile(pattern_sensibile, re.IGNORECASE)
+
+    # qui buttiamo dentro i risultati
+    risultati = {}
+
+    # IL CICLO DELLA MORTE
+    for row in df.itertuples():
+        request = str(row.Request)
+        # usiamo la regexp di sopra
+        if regex.search(request):
+            chiave = (row.Client_IP, row.Country, row.ASN)
+            if chiave not in risultati:
+                risultati[chiave] = []
+            risultati[chiave].append(request)
+
+    # ricostruiamo la riga
+    report_finale = []
+    for chiave, richieste in risultati.items():
+        report_finale.append({
+            'Client_IP': chiave[0],
+            'Country': chiave[1],
+            'ASN': chiave[2],
+            'tentativi': len(richieste),
+            'cosa_cercavano': ", ".join(list(set(richieste))[:3])
+        })
+
+    # ce tocca pure ordinarlo a mano, che poracciata
+    report_finale.sort(key=lambda x: x['tentativi'], reverse=True)
+    return pd.DataFrame(report_finale)
+
+@timing
 def rileva_rompicojons(df, limite_tentativi=5, secondi=30):
     """Cerchiamo quelli che provano a fare login con il brute force!"""
     if df.empty: return pd.DataFrame()
@@ -198,10 +257,17 @@ def salva_report_html(bastardi, rompicojons, nome_file="report_sicurezza.html"):
     print(f"\n[OK] Report HTML generato: {nome_file}")
 
 # --- ESECUZIONE ---
+print("Leggiamo il file di log")
 df = carica_e_pulisci_log(args.logfile)
 if not df.empty:
+    print("Aggiungiamo i dati che ci servono")
     df = arricchisci_dati_rete(df, 'GeoLite2-Country.mmdb', 'GeoLite2-ASN.mmdb')
+    print("Cerchiamo i ladri di account col modo vecchio")
+    i_bastardi = cerca_bastardi_con_il_for(df)
+
+    print("Cerchiamo i ladri di account con la vettorizzazione")
     i_bastardi = cerca_bastardi(df)
+    print("Cerchiamo i rompicojons")
     i_rompicojons = rileva_rompicojons(df, limite_tentativi=10, secondi=60)
 
     if not i_bastardi.empty or not i_rompicojons.empty:
