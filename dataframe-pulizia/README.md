@@ -28,4 +28,6 @@ Mentre la classica `drop` richiede di recuperare gli indici , l'operatore `~` ag
 * **Pulizia:** Evita l'uso di `inplace=True` e `.index`, rendendo il codice più leggibile e Pythonico.
 
 ---
-*Realizzato da Francesco Contini per Sunday Coding.* [cite: 10, 91]
+*Realizzato da Francesco Contini per Sunday Coding.* 
+PS: ovviamente io non uso parole come Pythonico. Questa è stata un'idea di Gemini, e non ho capito perché dopo tutto questo tempo ancora non ha capito che queste cose io non le faccio.
+Pythonico... mah... 
