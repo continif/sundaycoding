@@ -1,5 +1,7 @@
 # Validazione Qualità Aria Milano con Pandera
 
+[![Substack](https://img.shields.io/badge/Substack-Sunday%20Coding-orange?style=for-the-badge&logo=substack)](https://sundaycoding.substack.com/p/sunday-coding-anno-nuovo-coi-bot)
+
 Esempio standalone di validazione di un CSV Open Data con [Pandera](https://pandera.readthedocs.io), applicato al dataset della qualità dell'aria del Comune di Milano.
 
 > 📰 **Questo codice è spiegato passo passo nella newsletter** [Pandera, il braccio destro dei validatori](https://sundaycoding.substack.com/p/pandera-il-braccio-destro-dei-validatori) — speciale di **Sunday Coding** dedicato alla validazione dichiarativa dei DataFrame.
