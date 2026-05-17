@@ -1,5 +1,7 @@
 # Il manuale segreto del 'Data Wrangling' elegante. #4
 
+[![Substack](https://img.shields.io/badge/Substack-Sunday%20Coding-orange?style=for-the-badge&logo=substack)](https://sundaycoding.substack.com/p/il-manuale-segreto-del-data-wrangling-4)
+
 Questo repository contiene un dataset di circa **300.000 righe uniche** estratte da log di elaborazione veicoli datati 2025. Per ottimizzare la distribuzione, il file CSV è stato compresso e suddiviso in 99 segmenti.
 
 ## 📦 Struttura dei File
