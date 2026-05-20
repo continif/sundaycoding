@@ -1,6 +1,6 @@
 # qaria-pipeline — La Pipeline Perfetta
 
-Companion code della serie **[La Pipeline Perfetta (S03)](https://sundaycoding.substack.com)** del **Sunday Coding**: una pipeline di ingestion dati completa, funzionante, e che gira interamente **sul tuo computer** senza dipendere da servizi esterni a pagamento.
+Companion code della serie **[La Pipeline Perfetta (S03)](https://sundaycoding.substack.com/p/s03e01-la-pipeline-perfetta)** del **Sunday Coding**: una pipeline di ingestion dati completa, funzionante, e che gira interamente **sul tuo computer** senza dipendere da servizi esterni a pagamento.
 
 Il dato di esempio è la **qualità dell'aria di Milano**. La pipeline lo scarica, lo valida, lo trasforma, lo arricchisce con un indice AQI, lo carica in un database, e si auto-monitora.
 
