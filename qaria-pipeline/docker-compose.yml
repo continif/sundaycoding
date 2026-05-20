@@ -1,0 +1,34 @@
+# docker-compose.yml — PostgreSQL opzionale per la pipeline qaria.
+#
+# La pipeline funziona di default con DuckDB (in-process, zero setup).
+# Questo compose è SOLO per chi vuole provare la variante PostgreSQL
+# descritta nella S03E04, senza installarsi Postgres a mano.
+#
+# Uso:
+#   docker compose up -d        # avvia PostgreSQL
+#   docker compose down         # ferma
+#   docker compose down -v      # ferma e cancella i dati
+#
+# Poi nella pipeline useresti psycopg2 al posto di duckdb (vedi S03E04).
+# Connessione: postgresql://qaria:qaria_dev_password@localhost:5432/qaria
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: qaria_postgres
+    environment:
+      POSTGRES_USER: qaria
+      POSTGRES_PASSWORD: qaria_dev_password
+      POSTGRES_DB: qaria
+    ports:
+      - "5432:5432"
+    volumes:
+      - qaria_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qaria"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  qaria_pgdata:

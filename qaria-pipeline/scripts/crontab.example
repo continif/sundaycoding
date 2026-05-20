@@ -1,0 +1,23 @@
+# crontab.example — Schedulazione della pipeline qaria-milano
+#
+# Per installarlo:
+#   1. Modifica il percorso assoluto qui sotto col tuo
+#   2. Lancia: crontab -e
+#   3. Incolla la riga (senza il '#')
+#
+# La pipeline gira ogni giorno alle 6:00. Output e errori vanno nel log.
+# Ricorda: cron parte con $PATH minimale, quindi usa SEMPRE path assoluti
+# e il python del virtualenv (.venv/bin/python), mai 'python' liscio.
+
+# 0 6 * * * cd /percorso/assoluto/qaria-pipeline && .venv/bin/python run_pipeline.py >> data/qaria.log 2>&1
+
+# --- Varianti utili ---
+
+# Ogni 6 ore (per dati che si aggiornano più spesso):
+# 0 */6 * * * cd /percorso/qaria-pipeline && .venv/bin/python run_pipeline.py >> data/qaria.log 2>&1
+
+# Solo nei giorni feriali (il Comune di Milano non pubblica nel weekend):
+# 0 6 * * 1-5 cd /percorso/qaria-pipeline && .venv/bin/python run_pipeline.py >> data/qaria.log 2>&1
+
+# Observability separata, ogni mattina alle 7 (dopo la pipeline):
+# 0 7 * * * cd /percorso/qaria-pipeline && .venv/bin/python -m qaria.health >> data/qaria.log 2>&1

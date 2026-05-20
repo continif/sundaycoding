@@ -1,0 +1,13 @@
+# Dipendenze della pipeline qaria-milano.
+# Installa con: pip install -r requirements.txt
+# (oppure, meglio: pip install -e . che legge pyproject.toml)
+
+requests>=2.28.0
+pandas>=2.0.0
+pandera>=0.18.0
+duckdb>=0.9.0
+pyarrow>=12.0.0
+
+# Opzionale: libreria di alerting (Telegram / Google Chat).
+# Senza, la pipeline logga gli alert invece di spedirli.
+# sundaycoding-alerting

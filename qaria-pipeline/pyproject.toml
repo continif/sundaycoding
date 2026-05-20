@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qaria-pipeline"
+version = "1.0.0"
+description = "Pipeline qualità aria Milano — companion code di 'La Pipeline Perfetta' (Sunday Coding S03)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Francesco Contini"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28.0",
+    "pandas>=2.0.0",
+    "pandera>=0.18.0",
+    "duckdb>=0.9.0",
+    "pyarrow>=12.0.0",
+]
+keywords = ["data-engineering", "pipeline", "etl", "duckdb", "pandera", "air-quality"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+alerting = [
+    # La libreria di alerting, sviluppata nello speciale pubblico S03E05.
+    # Installala con: pip install -e ".[alerting]"
+    # oppure clonala da: https://github.com/continif/sundaycoding-alerting
+    "sundaycoding-alerting",
+]
+
+[project.urls]
+Newsletter = "https://sundaycoding.substack.com"
+Repository = "https://github.com/continif/qaria-pipeline"
+
+[tool.setuptools.packages.find]
+include = ["qaria*"]
+exclude = ["tests*", "scripts*"]
