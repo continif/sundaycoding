@@ -2,7 +2,7 @@
 
 Una piccola libreria Python per spedire alert da una pipeline di dati su **Telegram** (canale personale), **Google Chat** (canale aziendale), o un **FakeChat** locale (sviluppo). Retry automatico con backoff esponenziale, deduplicazione temporale degli alert, factory che sceglie il canale giusto in base alle variabili d'ambiente.
 
-> 📰 **Questa libreria è spiegata passo passo nella newsletter** [Chi sveglia chi: alerting con Telegram e Google Chat](https://sundaycoding.substack.com) — speciale gratuito del **Sunday Coding** che fa da gemella della puntata a pagamento [S03E05 — Observability](https://sundaycoding.substack.com).
+> 📰 **Questa libreria è spiegata passo passo nella newsletter** [Chi sveglia chi: alerting con Telegram e Google Chat](https://sundaycoding.substack.com/p/alerting-google-chat-telegram) — speciale gratuito del **Sunday Coding** che fa da gemella della puntata a pagamento [S03E05 — Observability](https://sundaycoding.substack.com/p/s03e05-la-pipeline-perfetta).
 >
 > Se vuoi capire **perché** la libreria è strutturata così e non in un altro modo, leggi prima la newsletter: questo repository è il companion code, non un tutorial autosufficiente.
 
@@ -22,7 +22,7 @@ Una piccola libreria Python per spedire alert da una pipeline di dati su **Teleg
 ## Installazione
 
 ```bash
-git clone https://github.com/continif/sundaycoding-alerting.git
+git clone https://github.com/continif/sundaycoding.git
 cd sundaycoding-alerting
 pip install -e .
 ```
