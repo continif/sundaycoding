@@ -1,0 +1,4 @@
+# Note personali roma-traffic (COPIA in CLAUDE.local.md — resta fuori da git)
+- Sandbox GTFS-RT locale: http://localhost:8080/feed  (la mia copia, non la sorgente vera).
+- DB di staging da me sulla porta 5433, non la 5432 di default.
+- Il test "positions -k timeout" è flaky sul mio setup (Docker lento): rilancialo, non è un bug.
