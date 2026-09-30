@@ -1,6 +1,6 @@
 # roma-traffic — Il Microservizio Diffidente
 
-Progetto della **Stagione 4** di [Sunday Coding](https://sundaycoding.substack.com).
+Progetto della **Stagione 4** di [Sunday Coding](https://sundaycoding.substack.com/p/s04e01-il-microservizio-diffidente).
 
 `positions` è un microservizio FastAPI che espone la posizione dei mezzi di Roma
 leggendo il feed **GTFS-RT** di Roma Servizi per la Mobilità. È costruito per
