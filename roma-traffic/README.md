@@ -63,7 +63,7 @@ servizi). L'IP è il primo strato, non l'ultimo. Stesso principio sul bot: il
 esempio:
 ```
 RETI_AMMESSE = [                              # da DOVE accettiamo richieste (allowlist)
-    ip_network("127.0.0.1/8"),
+    ip_network("127.0.0.0/8"),
     ip_network("10.0.0.0/8"),                # intranet
     ip_network("172.16.0.0/12"),             # es. VPN
 ]
