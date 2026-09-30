@@ -57,3 +57,9 @@ L'allowlist di IP è un **filtro**, non una serratura: su un servizio davvero
 esposto la difesa seria è l'autenticazione (token per i client, TLS mutuo tra
 servizi). L'IP è il primo strato, non l'ultimo. Stesso principio sul bot: il
 `chat_id` in allowlist è ciò che separa un aiuto da una console aperta a chiunque.
+
+## In locale
+127.0.0.1 non è nell'allow list, se volete provarlo sul vostro PC impostate la variabile d'ambiente RETI_AMMESSE_EXTRA così:
+```
+export RETI_AMMESSE_EXTRA=127.0.0.0/8
+```
