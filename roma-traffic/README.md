@@ -59,7 +59,12 @@ servizi). L'IP è il primo strato, non l'ultimo. Stesso principio sul bot: il
 `chat_id` in allowlist è ciò che separa un aiuto da una console aperta a chiunque.
 
 ## In locale
-127.0.0.1 non è nell'allow list, se volete provarlo sul vostro PC impostate la variabile d'ambiente RETI_AMMESSE_EXTRA così:
+127.0.0.1 non è nell'allow list, se volete provarlo sul vostro PC dovete aggiungere 127.0.0.0/8 tra le reti ammesse in gates.py
+esempio:
 ```
-export RETI_AMMESSE_EXTRA=127.0.0.0/8
+RETI_AMMESSE = [                              # da DOVE accettiamo richieste (allowlist)
+    ip_network("127.0.0.1/8"),
+    ip_network("10.0.0.0/8"),                # intranet
+    ip_network("172.16.0.0/12"),             # es. VPN
+]
 ```
