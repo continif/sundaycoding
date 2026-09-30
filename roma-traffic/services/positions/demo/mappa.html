@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bus di Roma, in tempo reale</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html, body { height: 100%; margin: 0; font-family: system-ui, sans-serif; }
+  #mappa { position: absolute; inset: 0; }
+  #pannello {
+    position: absolute; z-index: 1000; top: 10px; right: 10px;
+    background: #fff; padding: 10px 12px; border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.35); font-size: 13px; max-width: 240px;
+  }
+  #pannello select { width: 100%; margin: 6px 0; }
+  #stato.errore { color: #b00020; }
+  .legenda span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px 0 8px; }
+</style>
+</head>
+<body>
+<div id="mappa"></div>
+<div id="pannello">
+  <strong>Bus di Roma</strong>
+  <select id="filtro"><option value="">Tutte le linee</option></select>
+  <div id="conteggio"></div>
+  <div id="stato">In attesa dei dati…</div>
+  <div class="legenda">
+    <span style="background:#1565c0"></span>fresco
+    <span style="background:#9e9e9e"></span>senza linea
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ---------------------------------------------------------------------------
+// Configurazione
+// ---------------------------------------------------------------------------
+// Sorgente dei dati: il servizio stesso, che serve anche questa pagina
+// (stessa origine => niente CORS). Se non risponde, campione incorporato.
+const SORGENTI = ["/vehicles"];
+
+// Il feed GTFS-RT si aggiorna ogni ~30 s: chiedere più spesso significa solo
+// scaricare lo stesso dato e scocciare il servizio.
+const INTERVALLO_MS = 30_000;
+
+// Oltre questa età (rispetto al mezzo più fresco del feed) il marker è "stantio".
+const SOGLIA_STANTIO_S = 60;
+
+// Campione reale, usato solo se nessuna sorgente risponde.
+const CAMPIONE = [
+  {"id":"136","linea":"30","lat":41.904388,"lon":12.474796,"ts":1790808144},
+  {"id":"155","linea":"M30","lat":41.882053,"lon":12.425357,"ts":1790808136},
+  {"id":"666","linea":"nMB","lat":41.897503,"lon":12.496152,"ts":1790808128},
+  {"id":"828","linea":"L80","lat":41.884960,"lon":12.501978,"ts":1790808134},
+  {"id":"3165","linea":"8","lat":41.879951,"lon":12.466655,"ts":1790808150},
+  {"id":"4305","linea":"64","lat":41.898338,"lon":12.468112,"ts":1790808134},
+  {"id":"1037","linea":"788","lat":41.801201,"lon":12.488963,"ts":1790808078},
+  {"id":"A520","linea":"051","lat":41.900219,"lon":12.669791,"ts":1790808167},
+  {"id":"7435","linea":null,"lat":41.898262,"lon":12.379148,"ts":1790808160}
+];
+
+// ---------------------------------------------------------------------------
+// Mappa
+// ---------------------------------------------------------------------------
+const mappa = L.map("mappa").setView([41.9, 12.49], 12);
+// Tile: OpenStreetMap standard. CARTO Positron ora richiede una API key (watermark).
+// Funziona perche' la pagina e' servita da http://...: il browser manda il Referer,
+// che il server volontario di OSM pretende (su file:// darebbe 403). Uso leggero
+// da demo: per un servizio vero si passa a un provider con chiave (MapTiler,
+// Stadia...) o a tile propri. Per cambiare provider basta sostituire queste costanti.
+const TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+const TILE_ATTRIBUZIONE = "&copy; contributori di <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>";
+L.tileLayer(TILE_URL, {
+  maxZoom: 19,
+  attribution: TILE_ATTRIBUZIONE
+}).addTo(mappa);
+
+// id -> marker. Il punto centrale della pagina: i marker si creano UNA volta
+// e poi si spostano. Ricrearli a ogni giro fa sfarfallare la mappa.
+const marker = new Map();
+let ultimoDato = [];
+let ultimoAggiornamento = null;
+
+function stile(bus, tsRiferimento) {
+  // L'età si misura rispetto al mezzo più fresco del feed, non rispetto
+  // all'orologio del browser: così un orologio sballato non colora tutto di grigio.
+  const eta = tsRiferimento - bus.ts;
+  const stantio = eta > SOGLIA_STANTIO_S;
+  const colore = bus.linea == null ? "#9e9e9e" : "#1565c0";
+  return {
+    radius: 6,
+    color: colore,
+    fillColor: colore,
+    weight: 1,
+    fillOpacity: stantio ? 0.25 : 0.85,
+    opacity: stantio ? 0.4 : 1
+  };
+}
+
+function popup(bus, eta) {
+  // DOM e textContent, non stringhe HTML: il JSON arriva da fuori, non ci si fida.
+  const div = document.createElement("div");
+  const t = document.createElement("strong");
+  t.textContent = bus.linea == null ? "Linea sconosciuta" : "Linea " + bus.linea;
+  div.appendChild(t);
+  div.appendChild(document.createElement("br"));
+  div.appendChild(document.createTextNode("Mezzo " + bus.id));
+  div.appendChild(document.createElement("br"));
+  div.appendChild(document.createTextNode("Dato di " + eta + " s prima del più recente"));
+  return div;
+}
+
+function valido(b) {
+  // Un feed reale contiene anche record rotti: meglio scartarli che far crollare la mappa.
+  return b && typeof b.id === "string" &&
+         Number.isFinite(b.lat) && Number.isFinite(b.lon) &&
+         Number.isFinite(b.ts);
+}
+
+function disegna() {
+  const scelta = document.getElementById("filtro").value;
+  const dati = ultimoDato.filter(valido);
+  const tsMax = dati.reduce((m, b) => Math.max(m, b.ts), 0);
+
+  const visti = new Set();
+  let mostrati = 0;
+
+  for (const bus of dati) {
+    if (scelta && String(bus.linea) !== scelta) continue;
+    visti.add(bus.id);
+    mostrati++;
+    const eta = tsMax - bus.ts;
+    let m = marker.get(bus.id);
+    if (m) {
+      m.setLatLng([bus.lat, bus.lon]);   // esiste già: basta spostarlo
+      m.setStyle(stile(bus, tsMax));
+    } else {
+      m = L.circleMarker([bus.lat, bus.lon], stile(bus, tsMax)).addTo(mappa);
+      marker.set(bus.id, m);
+    }
+    m.bindPopup(popup(bus, eta));
+  }
+
+  // Mezzi spariti dal feed (o esclusi dal filtro): via dalla mappa.
+  for (const [id, m] of marker) {
+    if (!visti.has(id)) { m.remove(); marker.delete(id); }
+  }
+  document.getElementById("conteggio").textContent = mostrati + " mezzi sulla mappa";
+}
+
+function aggiornaFiltro() {
+  const sel = document.getElementById("filtro");
+  const corrente = sel.value;
+  const linee = [...new Set(ultimoDato.filter(valido).map(b => b.linea).filter(l => l != null))]
+    .map(String).sort((a, b) => a.localeCompare(b, "it", { numeric: true }));
+  sel.length = 1;   // tiene solo "Tutte le linee"
+  for (const l of linee) sel.add(new Option("Linea " + l, l));
+  sel.value = linee.includes(corrente) ? corrente : "";
+}
+
+// ---------------------------------------------------------------------------
+// Caricamento
+// ---------------------------------------------------------------------------
+async function carica() {
+  const stato = document.getElementById("stato");
+  for (const url of SORGENTI) {
+    try {
+      const r = await fetch(url, { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const dati = await r.json();
+      if (!Array.isArray(dati)) throw new Error("formato inatteso");
+      ultimoDato = dati;
+      ultimoAggiornamento = Date.now();
+      stato.className = "";
+      stato.dataset.sorgente = url;
+      aggiornaFiltro();
+      disegna();
+      return;
+    } catch (e) { /* prova la sorgente successiva */ }
+  }
+  if (ultimoAggiornamento === null) {
+    // Nessuna sorgente e nessun dato precedente: campione incorporato.
+    ultimoDato = CAMPIONE;
+    ultimoAggiornamento = Date.now();
+    stato.dataset.sorgente = "campione incorporato";
+    aggiornaFiltro();
+    disegna();
+  } else {
+    // Dati precedenti sulla mappa: li teniamo, ma lo diciamo.
+    stato.className = "errore";
+  }
+}
+
+function scriviStato() {
+  const stato = document.getElementById("stato");
+  if (ultimoAggiornamento === null) return;
+  const s = Math.round((Date.now() - ultimoAggiornamento) / 1000);
+  const fonte = stato.dataset.sorgente || "";
+  stato.textContent = (stato.className === "errore" ? "Servizio non raggiungibile. " : "") +
+    "Aggiornato " + s + " s fa (" + fonte + ")";
+}
+
+document.getElementById("filtro").addEventListener("change", disegna);
+carica();
+setInterval(carica, INTERVALLO_MS);
+setInterval(scriviStato, 1000);   // il contatore scorre anche tra un fetch e l'altro
+</script>
+</body>
+</html>
