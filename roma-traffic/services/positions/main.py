@@ -8,11 +8,16 @@ import asyncio
 import logging
 from contextlib import asynccontextmanager
 
+from pathlib import Path
+
 from fastapi import FastAPI, Response, status
+from fastapi.responses import FileResponse
 
 from . import gates, stato, telegram
 from .errori import MezzoNonTrovato, registra_handler
 from .modelli import Vehicle
+
+DEMO_HTML = Path(__file__).parent / "demo" / "mappa.html"
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("positions")
@@ -46,6 +51,13 @@ async def applica_catena(req, call_next):
         if (stop := gate(req)) is not None:
             return stop
     return await call_next(req)
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    # Demo: UNA rotta per UN file, non StaticFiles (che esporrebbe un'intera cartella).
+    # Passa dalla stessa catena di gate dell'API, e sta sulla stessa origine => niente CORS.
+    return FileResponse(DEMO_HTML, media_type="text/html")
 
 
 @app.get("/vehicles", response_model=list[Vehicle])
