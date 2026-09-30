@@ -17,19 +17,33 @@ Ogni pezzo del codice nasce in una puntata:
 ## Avvio
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 
 cp .env.example .env          # poi riempi GTFS_RT_URL (e, se vuoi, i valori Telegram)
-export $(grep -v '^#' .env | xargs)
+# GTFS_RT_URL deve puntare al feed delle POSIZIONI (non trip_updates, non service_alerts):
+#   https://romamobilita.it/sites/default/files/rome_rtgtfs_vehicle_positions_feed.pb
 
-# sviluppo (ricarica automatica, solo su localhost)
-uvicorn services.positions.main:app --reload
-# poi apri http://127.0.0.1:8000/docs
+# sviluppo (ricarica automatica, solo su localhost, porta 8002)
+uvicorn services.positions.main:app --reload --port 8002 --env-file .env
+# poi apri http://127.0.0.1:8002/docs  (l'endpoint e' /vehicles, scritto giusto)
 
 # esercizio, dietro reverse proxy (l'IP client arriva da X-Forwarded-For)
-uvicorn services.positions.main:app --host 0.0.0.0 --proxy-headers
+uvicorn services.positions.main:app --host 0.0.0.0 --port 8002 --proxy-headers --env-file .env
 ```
+
+Da sapere, perche' sono i tre inciampi piu' comuni:
+
+- **`.env` e variabili d'ambiente.** `--env-file` NON sovrascrive le variabili gia'
+  presenti nella shell: se hai un vecchio `export GTFS_RT_URL=...` (anche in `~/.bashrc`),
+  vince quello. Controlla con `echo $GTFS_RT_URL`, e se serve `unset GTFS_RT_URL`.
+- **Cambi al `.env`.** `--reload` ricarica solo i file `.py`: dopo aver modificato il
+  `.env` riavvia uvicorn a mano (Ctrl+C e rilancio).
+- **`403 accesso non consentito` da localhost.** Il gate IP ammette solo le reti in
+  `RETI_AMMESSE` (`gates.py`: `10.0.0.0/8`, `172.16.0.0/12`). Per provare in locale serve
+  aggiungere `127.0.0.0/8` (attenzione: `127.0.0.1/8` non e' valido, ha bit host impostati);
+  non lasciarlo in produzione. Il User-Agent deve inoltre essere quello di un browser:
+  `curl` e `python-requests` vengono rifiutati (`403 client non riconosciuto`).
 
 Telegram è **opzionale**: senza `TELEGRAM_BOT_TOKEN` il servizio parte e serve
 identico. Con il token, all'avvio parte il long polling (nessuna porta aperta).
@@ -57,14 +71,3 @@ L'allowlist di IP è un **filtro**, non una serratura: su un servizio davvero
 esposto la difesa seria è l'autenticazione (token per i client, TLS mutuo tra
 servizi). L'IP è il primo strato, non l'ultimo. Stesso principio sul bot: il
 `chat_id` in allowlist è ciò che separa un aiuto da una console aperta a chiunque.
-
-## In locale
-127.0.0.1 non è nell'allow list, se volete provarlo sul vostro PC dovete aggiungere 127.0.0.0/8 tra le reti ammesse in gates.py
-esempio:
-```
-RETI_AMMESSE = [                              # da DOVE accettiamo richieste (allowlist)
-    ip_network("127.0.0.0/8"),
-    ip_network("10.0.0.0/8"),                # intranet
-    ip_network("172.16.0.0/12"),             # es. VPN
-]
-```
