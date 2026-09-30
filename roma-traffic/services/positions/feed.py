@@ -50,7 +50,9 @@ async def refresh() -> list[dict]:
         # config mancante: lo trattiamo come guasto della sorgente, non come crash
         raise httpx.HTTPError("GTFS_RT_URL non configurato")
 
-    async with httpx.AsyncClient(timeout=10) as client:  # timeout stretto: una fonte lenta e' peggio di una morta
+    # follow_redirects: romamobilita.it risponde 301 (httpx di default non lo segue -> 503 perenne).
+    # Il dominio di arrivo e' comunque quello configurato dall'operatore, non input di un client.
+    async with httpx.AsyncClient(timeout=10, follow_redirects=True) as client:  # timeout stretto: una fonte lenta e' peggio di una morta
         r = await client.get(FEED_URL)
         r.raise_for_status()                             # un 4xx/5xx del feed diventa eccezione, non dati finti
 
