@@ -1,0 +1,7 @@
+beautifulsoup4
+lxml
+duckdb
+pyarrow
+pytest
+snowballstemmer
+mistral-common[sentencepiece]
