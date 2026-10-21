@@ -111,9 +111,38 @@ python -m pytest e03/
 ```
 
 - `stringhe.py`: forza bruta, KMP, Horspool, Rabin-Karp e Aho-Corasick, con `test_stringhe.py`.
-- `indice.py`: l'indice invertito con le posizioni in `indice/indice.parquet`, e `cerca()`,
+- `indice.py`: l'indice inverso con le posizioni in `indice/indice.parquet`, e `cerca()`,
   `cerca_frase()`, `cerca_sql()`, le varianti dal dizionario; i test in `test_indice.py`.
 - `specchio.py`: il paragrafo stampato al contrario, i palindromi, le parole bifronti.
+
+## e04 — Matrici
+
+Free, *Cercare è moltiplicare* (serve l'indice generato in e03)
+
+```
+python e04/matrice.py indice/
+python e04/determinante.py
+```
+
+- `matrice.py`: la matrice termini × paragrafi del libro, i pesi, una ricerca come
+  matrice × vettore, le righe parallele, la SVD, il determinante come volume dei
+  risultati, float32 contro float64.
+- `determinante.py`: Laplace, Gauss e NumPy, `solve` contro `inv`, i float che tradiscono.
+
+Paid, *S05E04 — Il registro di carico* (servono `vocabolario/` e `indice/` dell'e03)
+
+```
+python e04/cerca.py "la marmellata ieri e domani" --rank
+python e04/cerca.py regina --rank --vari
+python e04/bench_registro.py indice/ vocabolario/
+python e04/pagerank.py corpus/specchio.jsonl
+python -m pytest e04/
+```
+
+- `registro.py`: la matrice termini × paragrafi dal Parquet, TF-IDF e BM25 (a mano e
+  con le matrici), le varianti come gruppo, ranking, diversità con determinante e MMR.
+- `cerca.py`: il comando `cerca --rank` (e `--vari`, `--schema`).
+- `pagerank.py`: PageRank sul grafo pesato degli incontri tra personaggi.
 
 I numeri citati negli articoli sono stati misurati con Python 3.13 su una
 macchina virtuale a due core: sulla vostra cambiano i millisecondi, non i rapporti.

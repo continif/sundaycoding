@@ -5,3 +5,5 @@ pyarrow
 pytest
 snowballstemmer
 mistral-common[sentencepiece]
+numpy
+scipy
