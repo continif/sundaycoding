@@ -144,5 +144,56 @@ python -m pytest e04/
 - `cerca.py`: il comando `cerca --rank` (e `--vari`, `--schema`).
 - `pagerank.py`: PageRank sul grafo pesato degli incontri tra personaggi.
 
+## e05 — Vettori su ChromaDB
+
+ChromaDB è fissato alla 1.5.9 in `requirements.txt`: tra una minor e l'altra
+l'API della configurazione cambia, e mezzo web è scritto per le versioni 0.x.
+
+Free, *ChromaDB in dieci minuti (e cosa fare nell'undicesimo)*
+
+```
+python e05/free_chroma.py
+```
+
+- `free_chroma.py`: il magazzino per somiglianza, con vettori scritti a mano
+  (dolce, salato, croccante): client, collection, `add`, `query`, filtri `where`,
+  `update`/`upsert`/`delete`, persistenza, e le trappole dell'undicesimo minuto.
+  Non scarica nessun modello: i vettori li passiamo noi (`embedding_function=None`).
+
+Paid, *S05E05 — I libri vicini* (servono `vocabolario/` e `indice/` dell'e03)
+
+```
+python e05/simili.py II.89
+python e05/simili.py VI.89 --capitolo VI -k 3
+python e05/simili.py II.89 --tipo dialogo
+python e05/simili.py --testo "parole con due significati"
+python e05/simili.py II.89 --forza-bruta
+python e05/bench_vicini.py indice/ vocabolario/            # il libro, un minuto
+python e05/bench_vicini.py indice/ vocabolario/ --scala    # + vettori sintetici fino a 100.000, una decina di minuti
+python -m pytest e05/
+```
+
+- `vettori.py`: i vettori TF-IDF e LSA (SVD a 100 direzioni) dei paragrafi, e i vicini
+  a forza bruta con una moltiplicazione tra matrici e `argpartition`.
+- `hnsw.py`: HNSW in miniatura, con il contatore delle distanze calcolate.
+- `simili.py`: il comando `simili`. La prima volta costruisce la collection Chroma
+  in `vettori/`, poi la riapre; `--forza-bruta` dà gli stessi risultati in NumPy.
+- `bench_vicini.py`: le misure della puntata, compresa la trappola di `modify()`
+  (provata con tre processi Python separati).
+
+Le recall di Chroma cambiano un po' da un'esecuzione all'altra: il grafo HNSW
+si costruisce con più thread, e l'ordine di inserimento cambia i vicini scelti.
+
+## Cosa non c'è nel repo
+
+Si generano in locale e restano fuori (vedi `.gitignore`), per licenza o perché
+contengono il testo del libro:
+
+- `attrav_h/` e `corpus/specchio.jsonl`: il libro, CC BY-NC-SA 4.0;
+- `dizionario/` e `vocabolario/`: il dizionario dict-it e i Parquet derivati, GPL 3;
+- `indice/`: l'indice del libro, con i paragrafi;
+- `vettori/`: la collection Chroma, con i paragrafi come documenti;
+- `alberi/` e `schedario.duckdb`: i database di prova dell'e02.
+
 I numeri citati negli articoli sono stati misurati con Python 3.13 su una
 macchina virtuale a due core: sulla vostra cambiano i millisecondi, non i rapporti.
