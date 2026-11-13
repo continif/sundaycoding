@@ -1,0 +1,20 @@
+{
+  "nota": "Le 15 query con la scena attesa. Le prime 5 sono quelle di E04 e E05 (già viste: i numeri delle puntate scorse le riguardano). Le altre 10 sono state scritte e congelate in questo file PRIMA di lanciare qualsiasi ricerca su di esse. 'attesi' sono i paragrafi che portano la scena: basta trovarne uno nei primi 5 (hit@5), e si misura anche in che posizione arriva il primo (MRR).",
+  "query": [
+    {"id": "q01", "gia_vista": true,  "testo": "la marmellata ieri e domani ma mai oggi", "attesi": ["V.22"]},
+    {"id": "q02", "gia_vista": true,  "testo": "per quanto si corra si rimane sempre allo stesso punto", "attesi": ["II.89"]},
+    {"id": "q03", "gia_vista": true,  "testo": "parole con due significati", "attesi": ["VI.89"]},
+    {"id": "q04", "gia_vista": true,  "testo": "l'uovo seduto sul muro", "attesi": ["VI.2"]},
+    {"id": "q05", "gia_vista": true,  "testo": "la regina che corre senza muoversi", "attesi": ["II.89"]},
+    {"id": "q06", "gia_vista": false, "testo": "i due gemelli che vogliono battersi per un giocattolo nuovo rotto", "attesi": ["IV.77", "IV.78", "IV.103", "IV.104"]},
+    {"id": "q07", "gia_vista": false, "testo": "Alice è soltanto un'idea nel sogno del Re addormentato", "attesi": ["IV.50", "IV.52", "IV.53", "IV.59"]},
+    {"id": "q08", "gia_vista": false, "testo": "le due regine interrogano Alice con le operazioni aritmetiche", "attesi": ["IX.27", "IX.29", "IX.31", "IX.34"]},
+    {"id": "q09", "gia_vista": false, "testo": "il leone e l'unicorno che si litigano la torta", "attesi": ["VII.43", "VII.86", "VII.93", "VII.107"]},
+    {"id": "q10", "gia_vista": false, "testo": "il cavaliere con il nido di api legato alla sella", "attesi": ["VIII.30", "VIII.31"]},
+    {"id": "q11", "gia_vista": false, "testo": "le piante profumate di palude che si allontanano ogni volta che si cerca di coglierle", "attesi": ["V.102", "V.103", "V.104"]},
+    {"id": "q12", "gia_vista": false, "testo": "i fiori del giardino che sanno parlare", "attesi": ["II.6", "II.7", "II.8", "II.9", "II.10", "II.11"]},
+    {"id": "q13", "gia_vista": false, "testo": "il controllore del treno rimprovera Alice che non ha il biglietto", "attesi": ["III.8", "III.14"]},
+    {"id": "q14", "gia_vista": false, "testo": "il bosco dove le cose perdono il nome", "attesi": ["III.94", "III.95", "III.96", "III.105"]},
+    {"id": "q15", "gia_vista": false, "testo": "chi ha fatto il sogno, io o il Re Rosso? lo chiede al gattino", "attesi": ["XII.11", "XII.12", "XII.13"]}
+  ]
+}

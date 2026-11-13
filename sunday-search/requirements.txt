@@ -7,3 +7,6 @@ snowballstemmer
 mistral-common[sentencepiece]
 numpy
 scipy
+chromadb==1.5.9
+# facoltativo, solo per e06/modello_vero.py (il modello si scarica da Hugging Face):
+# sentence-transformers

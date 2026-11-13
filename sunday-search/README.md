@@ -184,6 +184,45 @@ python -m pytest e05/
 Le recall di Chroma cambiano un po' da un'esecuzione all'altra: il grafo HNSW
 si costruisce con più thread, e l'ordine di inserimento cambia i vicini scelti.
 
+## e06 — Il mini motore di ricerca
+
+Free, *Come si taglia un testo prima di darlo ai vettori* (servono `vocabolario/` e `indice/` dell'e03)
+
+```
+python e06/chunking.py indice/ vocabolario/
+```
+
+- `chunking.py`: otto modi di tagliare il libro (per paragrafo, a finestre con e senza
+  sovrapposizione, a parole, per scena) come matrici di assegnazione, e quanto rendono
+  sulle 15 query di `valutazione.json`.
+
+Paid, *S05E06 — Il bibliotecario che consiglia* (servono `vocabolario/` e `indice/`; per `simili` e `percorso` basta lo stesso)
+
+```
+python e06/motore.py cerca "il leone e l'unicorno" --spiega
+python e06/motore.py cerca "sogno" --capitolo XII --tipo prosa
+python e06/motore.py cerca "l'uovo seduto sul muro" --scena
+python e06/motore.py simili II.89
+python e06/motore.py percorso V.22 VI.89
+python e06/motore.py shell
+python e06/valuta.py indice/ vocabolario/        # le 15 query, ablation, bootstrap
+python e06/parole.py indice/                      # gli embedding di parole fatti in casa
+python -m pytest e06/
+```
+
+- `parole.py`: embedding di parole addestrati sul libro (co-occorrenze, PPMI, SVD a 100
+  dimensioni): niente modello scaricato, 0,8 s di addestramento.
+- `tesauro.py`: l'espansione della query con i sinonimi del thesaurus di e03.
+- `ricerca.py`: i quattro ranker (lessicale, tesauro, LSA, parole) e il Reciprocal Rank Fusion.
+- `valutazione.json` e `valuta.py`: 15 query con il paragrafo atteso, hit@5, MRR, bootstrap.
+- `grafo.py`: il grafo di somiglianza tra paragrafi (K vicini, Dijkstra). Non è un grafo di conoscenza.
+- `motore.py`: la riga di comando. I filtri passano da Chroma (collection `specchio_filtri`
+  dentro `vettori/`) e valgono per tutti i ranker.
+- `modello_vero.py`: facoltativo, un modello di embedding multilingue scaricato da Hugging Face
+  come quinto ranker. Non è stato eseguito per scrivere la puntata: nessun numero lo include.
+
+`valutazione.json` contiene le domande e i paragrafi attesi, non il testo del libro.
+
 ## Cosa non c'è nel repo
 
 Si generano in locale e restano fuori (vedi `.gitignore`), per licenza o perché
@@ -192,7 +231,7 @@ contengono il testo del libro:
 - `attrav_h/` e `corpus/specchio.jsonl`: il libro, CC BY-NC-SA 4.0;
 - `dizionario/` e `vocabolario/`: il dizionario dict-it e i Parquet derivati, GPL 3;
 - `indice/`: l'indice del libro, con i paragrafi;
-- `vettori/`: la collection Chroma, con i paragrafi come documenti;
+- `vettori/`: le collection Chroma (`specchio_lsa100` di e05, `specchio_filtri` di e06), con i paragrafi come documenti;
 - `alberi/` e `schedario.duckdb`: i database di prova dell'e02.
 
 I numeri citati negli articoli sono stati misurati con Python 3.13 su una

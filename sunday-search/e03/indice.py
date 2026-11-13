@@ -1,7 +1,7 @@
 """
 S05E03 paid — L'indice analitico del libro, e il primo cerca().
 
-L'indice invertito: per ogni forma, la lista dei paragrafi (e delle
+L'indice inverso: per ogni forma, la lista dei paragrafi (e delle
 posizioni) in cui compare. Lo costruiamo con il tokenizzatore della free,
 lo salviamo in Parquet come il vocabolario, e lo interroghiamo in due modi:
 in Python, per vedere come funziona, e con DuckDB, per vedere quanto costa.

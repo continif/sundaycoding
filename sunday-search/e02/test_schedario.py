@@ -11,6 +11,8 @@ CORPUS = Path(__file__).parent.parent / "corpus" / "specchio.jsonl"
 
 @pytest.fixture(scope="module")
 def libro():
+    if not CORPUS.exists():
+        pytest.skip("serve corpus/specchio.jsonl (python corpus/estrai_specchio.py)")
     radice = costruisci(CORPUS)
     numera(radice)
     return radice
